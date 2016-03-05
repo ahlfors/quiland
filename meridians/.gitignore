@@ -1,0 +1,15 @@
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+.classpath
+.settings/
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.7z
+*.zip
+*.*~

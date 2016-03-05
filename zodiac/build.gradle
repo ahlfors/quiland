@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+tasks.withType(Compile) {
+    options.encoding = "UTF-8"
+}
+dependencies {
+    compile "org.apache.logging.log4j:log4j-core:${log4j2Version}"
+    testCompile "junit:junit:${junitVersion}"
+}

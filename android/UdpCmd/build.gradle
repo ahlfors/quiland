@@ -1,0 +1,40 @@
+apply plugin: "java"
+apply plugin: 'maven'
+
+group = "feuyeux.udp"
+version = "0.0.1-SNAPSHOT"
+
+repositories {
+    mavenCentral();
+}
+
+compileJava {
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+    options.encoding = 'UTF-8'
+}
+
+task dpVersion {
+    println "junitVersion=$junitVersion"
+    print "log4j2Version=" println log4j2Version
+    println "log4jVersion=$log4j2Version"
+    println "slf4jVersion=$slf4jVersion"
+    println "nettyVersion=$nettyVersion"
+    println "minaVersion = $minaVersion"
+    println "."
+}
+
+dependencies {
+    compile "io.netty:netty-all:${nettyVersion}"
+    compile "com.google.protobuf:protobuf-java:2.5.0"
+    testCompile "junit:junit:${junitVersion}"
+}
+
+configure(install.repositories.mavenInstaller) {
+    pom.project {
+        groupId 'feuyeux.udp'
+        artifactId 'air-io-udp'
+        version '1.0.0'
+        description = 'Installs the artifacts to the local Maven repository.'
+    }
+}

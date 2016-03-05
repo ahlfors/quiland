@@ -1,0 +1,1 @@
+single study for kafka 
