@@ -1,0 +1,16 @@
+*.txt
+*.war
+*.ear
+.settings
+target
+work
+.DS_Store
+.classpath
+.project
+.db
+.idea
+*.iml
+Thumbs.db
+.*~
+*.log
+bin/index
