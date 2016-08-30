@@ -12,7 +12,7 @@ http://visualvm.java.net/download.html
 如果线程正在执行的是一个Java方法，这个计数器记录的是正在执行的虚拟机字节码指令的地址；如果正在执行的是Natvie方法，这个计数器值则为空（Undefined）。此内存区域是唯一一个在Java虚拟机规范中没有规定任何OutOfMemoryError情况的区域。
 
 > 以上描述截取自：
-《深入理解Java虚拟机:JVM高级特性与最佳实践》 作者： 周志明
+> 《深入理解Java虚拟机:JVM高级特性与最佳实践》 作者： 周志明
 
 
 Each thread of a running program has its own pc register, or program counter, which is created when the thread is started. The pc register is one word in size, so it can hold both a native pointer and a returnValue. As a thread executes a Java method, the pc register contains the address of the current instruction being executed by the thread. An "address" can be a native pointer or an offset from the beginning of a method's bytecodes. If a thread is executing a native method, the value of the pc register is undefined.
@@ -20,7 +20,7 @@ Each thread of a running program has its own pc register, or program counter, wh
 对于一个运行中的Java程序而言，其中的每一个线程都有它自己的PC（程序计数器），在线程启动时创建。大小是一个字长。因此它既能持有一个本地指针，也能够持有一个returnAddress。当线程执行某个Java方法时，PC的内容总是下一条将被指向指令的“地址”。这里的“地址”可以是一个本地指针，也可以是在方法字节码中相对于该方法起始指令的偏移量。如果该线程正在执行一个本地方法，那么此时PC寄存器的值为”undefined”。
 
 > 以上描述截取自：
-《Inside the Java Virtual Machine 2nd Edition》 作者：Bill Venners
+> 《Inside the Java Virtual Machine 2nd Edition》 作者：Bill Venners
 
 
 ### 2 Java虚拟机栈
@@ -213,66 +213,7 @@ java.vm.version = 24.45-b08-internal
 sun.boot.library.path = /opt/taobao/install/jdk-1.7.0_51/jre/lib/amd64
 java.vendor.url = http://java.oracle.com/
 java.vm.vendor = Oracle Corporation
-path.separator = :
-file.encoding.pkg = sun.io
-java.vm.name = OpenJDK (Alibaba) 64-Bit Server VM
-java.util.logging.config.file = /home/admin/web-deploy/conf/general/logging.properties
-sun.os.patch.level = unknown
-sun.java.launcher = SUN_STANDARD
-user.country = CN
-org.eclipse.jetty.util.URI.charset = UTF-8
-user.dir = /usr/alibaba/install/jetty-distribution-7.2.0
-java.vm.specification.name = Java Virtual Machine Specification
-database.logging = false
-java.runtime.version = 1.7.0_51-b13
-java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
-os.arch = amd64
-java.endorsed.dirs = /opt/taobao/install/jdk-1.7.0_51/jre/lib/endorsed
-line.separator =
-
-java.io.tmpdir = /home/admin/web-deploy/jetty_server/tmp
-java.vm.specification.vendor = Oracle Corporation
-os.name = Linux
-sun.jnu.encoding = GB18030
-java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
-java.class.version = 51.0
-java.specification.name = Java Platform API Specification
-java.net.preferIPv4Stack = true
-jetty.home = /usr/alibaba/install/jetty-distribution-7.2.0
-org.eclipse.jetty.server.Request.maxFormContentSize = -1
-sun.management.compiler = HotSpot 64-Bit Tiered Compilers
-sun.net.client.defaultReadTimeout = 30000
-os.version = 2.6.32-220.23.2.ali927.el5.x86_64
-application.codeset = UTF-8
-user.home = /home/admin
-user.timezone = US/Pacific
-java.awt.printerjob = sun.print.PSPrinterJob
-file.encoding = GB18030
-java.specification.version = 1.7
-user.name = admin
-java.class.path = /home/admin/web-deploy/jetty_server/ext:/home/admin/web-deploy/jetty_server/ext/jetty-server-extended.jar:/home/admin/web-deploy/jetty_server/ext/log4j-1.2.12.jar:/home/admin/web-deploy/jetty_server/ext/slf4j-api-1.4.3.jar:/home/admin/web-deploy/jetty_server/ext/slf4j-log4j12-1.4.3.jar:/home/admin/web-deploy/jetty_server/ext/xercesImpl-2.9.1.jar:/home/admin/web-deploy/jetty_server/ext/xml-apis-1.3.04.jar:/home/admin/web-deploy/jetty_server/ext/xml-resolver-1.2.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-xml-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/servlet-api-2.5.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-http-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-continuation-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-server-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-security-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-servlet-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-webapp-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-deploy-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-servlets-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/com.sun.el_1.0.0.v201004190952.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/ecj-3.6.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/javax.el_2.1.0.v201004190952.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/javax.servlet.jsp_2.1.0.v201004190952.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/javax.servlet.jsp.jstl_1.2.0.v201004190952.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/jetty-jsp-2.1-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/org.apache.jasper.glassfish_2.1.0.v201007080150.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jsp/org.apache.taglibs.standard.glassfish_1.2.0.v201004190952.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-util-7.2.0.v20101020.jar:/usr/alibaba/install/jetty-distribution-7.2.0/lib/jetty-io-7.2.0.v20101020.jar
-java.vm.specification.version = 1.7
-sun.net.client.defaultConnectTimeout = 30000
-sun.arch.data.model = 64
-sun.java.command = /usr/alibaba/jetty/start.jar --ini=/home/admin/web-deploy/jetty_server/conf/start.ini
-java.home = /opt/taobao/install/jdk-1.7.0_51/jre
-user.language = zh
-java.specification.vendor = Oracle Corporation
-awt.toolkit = sun.awt.X11.XToolkit
-java.vm.info = mixed mode
-java.version = 1.7.0_51
-java.ext.dirs = /opt/taobao/install/jdk-1.7.0_51/jre/lib/ext:/usr/java/packages/lib/ext
-sun.boot.class.path = /opt/taobao/install/jdk-1.7.0_51/jre/lib/taobao-patch.jar:/opt/taobao/install/jdk-1.7.0_51/jre/lib/resources.jar:/opt/taobao/install/jdk-1.7.0_51/jre/lib/rt.jar:/opt/taobao/install/jdk-1.7.0_51/jre/lib/sunrsasign.jar:/opt/taobao/install/jdk-1.7.0_51/jre/lib/jsse.jar:/opt/taobao/install/jdk-1.7.0_51/jre/lib/jce.jar:/opt/taobao/install/jdk-1.7.0_51/jre/lib/charsets.jar:/opt/taobao/install/jdk-1.7.0_51/jre/lib/jfr.jar:/opt/taobao/install/jdk-1.7.0_51/jre/classes
-database.codeset = ISO-8859-1
-java.awt.headless = true
-java.vendor = Oracle Corporation
-file.separator = /
-java.vendor.url.bug = http://bugreport.sun.com/bugreport/
-sun.io.unicode.encoding = UnicodeLittle
-sun.rmi.transport.connectTimeout = 2000
-sun.cpu.endian = little
-jetty.logs = /home/admin/web-deploy/jetty_server/logs
-sun.cpu.isalist =
+...
 ```
 
 ### 4 jmap和jhat
@@ -362,7 +303,7 @@ num     #instances         #bytes  class name
   9:          7903        4534384  <methodDataKlass>
  10:        168631        4047144  java.lang.String
  ……
- ```
+```
 
 #### 3 堆转储快照
 
@@ -381,8 +322,6 @@ http://localhost:7000/showInstanceCounts/
 
 ```sh
 [lu.hl@v125193052 admin]$ sudo -uadmin jstack -l 14883 > aegis.pivot.stack.txt
-[lu.hl@v125193052 admin]$ sudo scp aegis.pivot.stack.txt erichan@10.18.212.171:/Users/erichan/快盘/+base/java_jvm/
-aegis.pivot.stack.txt                                                                                                         100%   62KB  62.3KB/s   00:00  
 ```
 
 - -l 除队长外，显示关于锁的附加信息。
